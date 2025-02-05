@@ -1,5 +1,3 @@
-// app/context/BankContext.tsx
-
 import React, { createContext, useState, ReactNode } from 'react';
 
 // Define the shape of a bet record.

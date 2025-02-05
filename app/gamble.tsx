@@ -1,5 +1,3 @@
-// app/gamble.tsx
-
 import React, { useState, useEffect, useContext } from "react";
 import {
   View,

@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import React from "react";
 import { BankProvider } from "./context/BankContext";
 import { Slot } from "expo-router";

@@ -1,5 +1,3 @@
-// app/index.tsx
-
 import React, { useContext } from "react";
 import {
   View,
