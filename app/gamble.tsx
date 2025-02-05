@@ -75,13 +75,13 @@ export default function GambleScreen() {
       : `Lost! Roll: ${roll}`;
     setResult(outcome);
     addBet({ bet, result: outcome });
-    ToastAndroid.show(outcome, ToastAndroid.SHORT);
+    // ToastAndroid.show(outcome, ToastAndroid.SHORT);
   };
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       {/*status bar */}
-      <StatusBar backgroundColor="#333" />
+      <StatusBar backgroundColor="#333" style="light" />
 
       {/* Custom header with a back button */}
       <View style={styles.header}>
