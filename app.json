@@ -1,21 +1,26 @@
 {
   "expo": {
     "name": "Project1",
-    "slug": "Project1",
+    "slug": "project1",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "entryPoint": "./index.js", 
+    "newArchEnabled": true, 
+    "jsEngine": "hermes", 
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "jsEngine": "hermes" 
     },
     "android": {
+      "package": "com.yourcompany.project1",
+      "jsEngine": "hermes", 
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -23,6 +28,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": []
   }
 }
