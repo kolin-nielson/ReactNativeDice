@@ -154,6 +154,20 @@ export default function GambleScreen() {
           <Pressable style={styles.actionButton} onPress={handleBet}>
             <Text style={styles.actionButtonText}>PLACE BET</Text>
           </Pressable>
+          
+          {/* Display the result of the bet */}
+          {result && (
+            <View style={styles.resultContainer}>
+              <Text
+                style={[
+                  styles.resultText,
+                  result.includes("Won") ? styles.winText : styles.loseText,
+                ]}
+              >
+                {result}
+              </Text>
+            </View>
+          )}
 
         </View>
       </LinearGradient>
