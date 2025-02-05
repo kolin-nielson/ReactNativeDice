@@ -51,11 +51,3 @@ The app leverages modern state management and navigation techniques to provide a
 - **@react-native-community/slider:** For an interactive slider component.
 - **ToastAndroid:** (Android only) Provides quick feedback messages.
 
-## Getting Started
-
-### Prerequisites
-
-- **Node.js & npm/yarn:** Make sure you have Node.js installed along with a package manager such as npm or yarn.
-- **Expo CLI:** Install Expo CLI globally if you haven’t already:
-  ```bash
-  npm install -g expo-cli
