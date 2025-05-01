@@ -1,53 +1,145 @@
-# Gambling Bank App
+# ReactNative Dice 🎲
 
-A modern, professional-looking mobile application built with React Native and Expo that simulates a gambling bank. Users can place bets, view their current balance, and check a live-updating betting history—all within a sleek, well-designed UI.
+<p align="center">
+  <img src="./assets/icon.png" alt="ReactNative Dice Logo" width="200"/>
+</p>
 
-## Overview
+A sleek, modern mobile application built with React Native and Expo that simulates a dice gambling game. Place bets, customize your target numbers, and track your winnings in real-time—all within an elegant, professionally designed UI.
 
-The Gambling Bank App allows users to:
-- View their current bank balance.
-- Place bets on a dice game using a customizable target and bet amount.
-- Receive instant feedback (via Toast notifications and on-screen messages) about the outcome of each bet.
-- See a live, scrollable betting history that updates in real-time.
+## 📱 App Preview
 
-The app leverages modern state management and navigation techniques to provide a seamless experience across multiple screens.
+<p align="center">
+  <img src="./screenshots/app-preview.png" alt="App Preview" width="800"/>
+  <br>
+  <em>The ReactNative Dice app features a dark-themed UI with intuitive betting controls</em>
+</p>
 
-## Features
+## 🎮 Overview
 
-- **Two-Screen Navigation:**  
-  Uses the Expo Router to switch between the Home screen (Bank overview) and the Gamble screen (betting table).
-  
-- **Global State Management:**  
-  A custom React Context (`BankContext`) is implemented to share the current balance and betting history between screens.
+ReactNative Dice allows users to:
+- View their current bank balance in a clean, modern interface
+- Place bets on a dice game using a customizable target and bet amount
+- Choose between betting "UNDER" or "OVER" a target number
+- Receive instant visual feedback about the outcome of each bet
+- Track betting history in a live, scrollable feed that updates in real-time
 
-- **Dynamic Betting Experience:**  
-  - Place bets with a custom amount using a **TextInput**.
-  - Adjust the betting target using a dynamic **Slider**.
-  - Choose between betting "UNDER" or "OVER" with clearly highlighted options.
-  
-- **Instant User Feedback:**  
-  Provides immediate feedback via Toast messages and on-screen updates regarding win/loss outcomes and updated balances.
-  
-- **Responsive & Professional UI:**  
-  - Modern styling with a dark-themed gradient background.
-  - Custom headers and status bars ensure a polished look.
-  - A scrollable betting history that prevents layout issues as more bets are placed.
-  
-- **Extra Expo Packages:**  
-  - **expo-screen-orientation:** Locks the app to portrait mode.
-  - **expo-linear-gradient:** Creates visually appealing gradient backgrounds.
-  - **expo-status-bar:** Manages the status bar appearance.
-  - **@react-native-community/slider:** Provides a custom slider component for target selection.
+The app leverages modern React Native patterns and Expo tools to provide a seamless cross-platform experience.
 
-## Technologies Used
+## ✨ Features
 
-- **React Native:** The primary framework for building the mobile application.
-- **Expo:** A powerful set of tools and services built around React Native to help you build, deploy, and quickly iterate on native apps.
-- **Expo Router:** Simplifies navigation between screens.
-- **React Context API:** For state management across the app.
-- **expo-linear-gradient:** For creating gradient backgrounds.
-- **expo-screen-orientation:** To lock the screen orientation.
-- **expo-status-bar:** For customizing the status bar.
-- **@react-native-community/slider:** For an interactive slider component.
-- **ToastAndroid:** (Android only) Provides quick feedback messages.
+- **Intuitive Two-Screen Navigation:**
+  Smooth transitions between the Home screen (Bank overview) and the Gamble screen (betting interface) using Expo Router.
 
+- **Efficient State Management:**
+  A custom React Context (`BankContext`) maintains the current balance and betting history across the entire app.
+
+- **Dynamic Betting Experience:**
+  - Set custom bet amounts with a clean numeric input
+  - Fine-tune your target number with a responsive slider
+  - Toggle between "UNDER" and "OVER" betting options with visual feedback
+  - Calculated odds and payouts based on your selected target
+
+- **Real-time Feedback:**
+  Immediate visual updates and notifications about wins/losses and updated balances.
+
+- **Polished UI/UX:**
+  - Elegant dark-themed gradient backgrounds
+  - Custom headers and status bars for a premium look
+  - Responsive layouts that adapt to different screen sizes
+  - Smooth animations and transitions
+
+- **Technical Excellence:**
+  - TypeScript for type safety and better developer experience
+  - Portrait mode lock for optimal gameplay
+  - Gradient backgrounds for visual appeal
+  - Custom slider component for intuitive target selection
+
+## 🛠️ Technologies Used
+
+- **React Native:** Core framework for building the mobile application
+- **TypeScript:** For type-safe code and enhanced developer experience
+- **Expo:** Development platform for building and deploying React Native apps
+- **Expo Router:** For seamless navigation between screens
+- **React Context API:** For global state management
+- **expo-linear-gradient:** For creating beautiful gradient backgrounds
+- **expo-screen-orientation:** For locking the screen to portrait mode
+- **@react-native-community/slider:** For the interactive target selector
+- **ToastAndroid:** For providing quick feedback messages on Android
+
+## 📋 Installation & Setup
+
+Follow these steps to get the app running on your local machine:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kolin-nielson/ReactNativeDice.git
+   cd ReactNativeDice
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+4. **Run on a device or emulator**
+   - For Android:
+     ```bash
+     npm run android
+     # or
+     yarn android
+     ```
+   - For iOS:
+     ```bash
+     npm run ios
+     # or
+     yarn ios
+     ```
+
+## 🎯 How to Play
+
+1. **Start with your initial balance** of $1,000
+2. **Enter your bet amount** in the input field
+3. **Adjust the target number** using the slider (1-99)
+4. **Choose your bet type**:
+   - **UNDER**: Win if the dice roll is less than your target
+   - **OVER**: Win if the dice roll is greater than your target
+5. **Place your bet** and see the result immediately
+6. **Check your updated balance** and betting history
+
+The payout multiplier is calculated based on probability:
+
+- For UNDER bets: `(100 / target) * 0.95`
+- For OVER bets: `(100 / (100 - target)) * 0.95`
+
+The lower the probability of winning, the higher the potential payout!
+
+## 🔄 Game Mechanics
+
+The game simulates a 100-sided dice (0-99):
+
+- If you bet UNDER 50, you win when the roll is less than 50
+- If you bet OVER 50, you win when the roll is greater than 50
+- The house edge is 5% (the 0.95 multiplier in the payout calculation)
+- Moving the target slider changes both your odds of winning and the potential payout
+
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="1.png" alt="Betting Screen" width="300"/>
+</p>
+
+## 🙏 Acknowledgments
+
+- Icons and design inspiration from various sources
+- Built with React Native and Expo
+- Special thanks to all contributors
